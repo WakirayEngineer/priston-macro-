@@ -1,0 +1,16 @@
+## Notes
+
+Some in-game settings must be configured correctly, such as:
+
+- potion slot positions
+- skill key bindings
+- shield key binding
+
+This project was mainly designed for mage characters, but depending on the build and configuration, it can also work for shamans.
+
+It is important to remember that after some time, manual movement or improvements to the movement system will still be necessary.  
+This happens because the game includes mechanics that stop attacks from working properly if the character stays stationary for too long.
+
+## Tip
+
+Using vampirism items can greatly improve character survival, allowing the automation to run safely for a longer period of time.
