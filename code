@@ -1,0 +1,89 @@
+#include <Keyboard.h>
+
+// LEDs
+const int ledPower  = 9;
+const int ledHP     = 8;
+const int ledMana   = 7;
+const int ledShield = 6;
+const int ledAttack = 5;
+
+// Controle de tempo
+unsigned long previousHP = 0;
+unsigned long previousMana = 0;
+unsigned long previousShield = 0;
+unsigned long previousAttack = 0;
+
+void setup() {
+
+  Keyboard.begin();
+
+  pinMode(ledPower, OUTPUT);
+  pinMode(ledHP, OUTPUT);
+  pinMode(ledMana, OUTPUT);
+  pinMode(ledShield, OUTPUT);
+  pinMode(ledAttack, OUTPUT);
+
+  // LED D9 sempre ligado
+  digitalWrite(ledPower, HIGH);
+}
+
+void loop() {
+
+  unsigned long currentMillis = millis();
+
+  // HP - tecla 1 - 5 segundos
+  if (currentMillis - previousHP >= 5000) {
+
+    previousHP = currentMillis;
+
+    piscarLED(ledHP);
+
+    Keyboard.press('1');
+    delay(100);
+    Keyboard.release('1');
+  }
+
+  // Mana - tecla 2 - 10 segundos
+  if (currentMillis - previousMana >= 10000) {
+
+    previousMana = currentMillis;
+
+    piscarLED(ledMana);
+
+    Keyboard.press('2');
+    delay(100);
+    Keyboard.release('2');
+  }
+
+  // Shield - F1 - 20 segundos
+  if (currentMillis - previousShield >= 20000) {
+
+    previousShield = currentMillis;
+
+    piscarLED(ledShield);
+
+    Keyboard.press(KEY_F1);
+    delay(100);
+    Keyboard.release(KEY_F1);
+  }
+
+  // Attack - F2 - 2 segundos
+  if (currentMillis - previousAttack >= 2000) {
+
+    previousAttack = currentMillis;
+
+    piscarLED(ledAttack);
+
+    Keyboard.press(KEY_F2);
+    delay(100);
+    Keyboard.release(KEY_F2);
+  }
+}
+
+// Função para piscar LED
+void piscarLED(int ledPin) {
+
+  digitalWrite(ledPin, HIGH);
+  delay(200);
+  digitalWrite(ledPin, LOW);
+}
