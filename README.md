@@ -38,6 +38,14 @@ I am still improving the movement system so the character can walk periodically 
 - C/C++
 - HID Keyboard Emulation
 
+<img width="1200" height="1600" alt="WhatsApp Image 2026-05-26 at 14 36 29" src="https://github.com/user-attachments/assets/13bc2ea0-9cd7-41b5-ac43-c6311d3b4ac4" />
+
+
+https://github.com/user-attachments/assets/5dc313cf-dae2-40e2-874c-555a7e49c302
+
+
+
+
 <img width="876" height="781" alt="Captura de tela 2026-05-26 132144" src="https://github.com/user-attachments/assets/b8f1d66d-904b-4095-8bfa-39730b65197c" />
 
 
